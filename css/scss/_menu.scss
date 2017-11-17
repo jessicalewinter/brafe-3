@@ -1,13 +1,7 @@
 .header{
     background: $dark-bege;
-    padding: 20px;
-    display: flex;
-    @include d(s){
-        flex-direction: column;
-    }
-    .header-logo{
-        flex: 1;
-    }
+    padding: 20px 0;
+   
     .header-menu ul{
         display: flex;
         flex-wrap: wrap;

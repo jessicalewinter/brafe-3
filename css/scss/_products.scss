@@ -1,16 +1,13 @@
 .products{
-    flex: 1;
+   
     padding: 20px 10px;
     h1{
         font-size:2.25em;
-        flex: 1;
+        
         margin-right: 20px;
     }
     header{
-        display: flex;
-        @include d(s){
-            flex-direction: column;
-        }
+        
         a{
             background-color: $orange;
             color: $bege;
@@ -21,6 +18,7 @@
             font-family: Courier New, Courier, monospace;
             text-transform: uppercase;
             text-align: center;
+            text-decoration: none;
             &:hover{
                 background-color: $black;
                 color: $orange;
@@ -34,14 +32,7 @@
         box-shadow: 0 1px 3px 0 rgba(0,0,0,.35);
         margin-top: 20px;
         position: relative;
-        display: flex;
         
-        @include d(s){
-            flex-direction: column;
-        }
-        img{
-            align-self: flex-start;
-        }
         a{
             width: 30px;
             height: 30px;
@@ -52,6 +43,7 @@
             right: 20px;
             background: url('../img/edit.svg') no-repeat;
             transition: .4s all ease-in-out;
+            text-decoration: none;
         }
         a:hover{
             background: url('../img/edit-hover.svg') no-repeat;

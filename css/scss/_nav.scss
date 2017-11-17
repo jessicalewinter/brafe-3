@@ -1,9 +1,3 @@
-.main-container{
-    display: flex;
-    @include d(s){
-        flex-direction: column;
-    }
-}
 
 .side-nav{
     flex: 1;
@@ -20,24 +14,11 @@
         border-bottom: 2px solid $light-black;
         font-size: 1.125em;
         transition: .4s all ease-in-out;
+        text-decoration: none;
         &:hover{
             background-color: $orange;
-            @include d(s){
-                color: $orange;
-            }
-        }
-        @include d(s){
-            width: 44px;
-            height: 44px;
-            overflow: hidden;
-            padding: 10px;
-            border: none;
-            color: $black;
-            background: $black;
-            border-radius: 10px;
-            text-indent: -400px;
-            margin-right: 10px;
-         } 
+            
+        }  
         &::before{
             content: '';
             display: inline-block;
@@ -46,10 +27,7 @@
             position: relative;
             top: 5px;
             background-image: url('../img/icones.png');
-            @include d(s){
-                margin: 0;
-                top: 0;
-            }
+            
         }
         
     }
@@ -81,13 +59,38 @@
         @include d(s){
             display: flex;
             flex-wrap: wrap;
+            margin-top: 10px;
         }
     }
 
     ul li{
         @include d(s){
             margin-bottom: 10px;
-            margin-top: 10px;
+            margin-right: 10px;
         }
+        a{
+            @include d(s){
+                width: 44px;
+                height: 44px;
+                overflow: hidden;
+                padding: 10px;
+                border: none;
+                color: $black;
+                background: $black;
+                border-radius: 10px;
+                margin-right: 10px;
+             } 
+        }
+        a:hover{
+            @include d(s){
+                color: $orange;
+            }
+        }
+        a::before{
+            @include d(s){
+                margin: 0;
+                top: 0;
+            }
+        }    
     }
 }
