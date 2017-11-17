@@ -8,10 +8,17 @@
     }
     .header-logo{
         float: left;
+        @include d(s){
+            float: none;
+        }
     }
-    .header-menu{
+    .header-menu ul{
         float: right;
-        ul li{
+        @include d(s){
+            float: none;
+            margin-top: 10px;
+        }
+        li{
             display: inline-block;
             a{
                 color: $black;
