@@ -6,21 +6,25 @@
 }
 
 .side-nav{
-    width: 300px;
+    flex: 1;
+    max-width: 300px;
     background: $black;
-    li{
-        
+    margin-right: 10px;
+    ul li{
+       margin: 30px 0;
+      
     }
-    li a{
-       
+    ul li a{
         color: $white;
+        padding: 20px; 
         border-bottom: 2px solid $light-black;
         font-size: 1.125em;
-        padding: 20px;
         transition: .4s all ease-in-out;
         &:hover{
             background-color: $orange;
-            color: $orange;
+            @include d(s){
+                color: $orange;
+            }
         }
         @include d(s){
             width: 44px;
@@ -31,7 +35,8 @@
             color: $black;
             background: $black;
             border-radius: 10px;
-            text-indent: -200px;
+            text-indent: -400px;
+            margin-right: 10px;
          } 
         &::before{
             content: '';
@@ -40,10 +45,8 @@
             height: 24px;
             position: relative;
             top: 5px;
-            margin-right: 15px;
             background-image: url('../img/icones.png');
             @include d(s){
-                display: block;
                 margin: 0;
                 top: 0;
             }
@@ -68,12 +71,23 @@
     li:nth-child(6) a::before{
         background-position: 0 -120px;
     }
-    @include d(m){
-        
-    }
+
     @include d(s){
-        margin: 20px 0 0 20px;
+        margin: 10px;
         background: none;
-        width: auto;
+        max-width: 100%;
+     }
+     ul{
+        @include d(s){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    ul li{
+        @include d(s){
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
     }
 }
