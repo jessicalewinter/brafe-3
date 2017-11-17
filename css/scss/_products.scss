@@ -3,10 +3,19 @@
     margin: 0 auto;
     max-width: 960px;
     padding: 20px;
+    @include d(m){
+        width: calc(100% - 200px);
+    }
+    @include d(s){
+        width: 100%;
+    }
 
     h1{
         font-size:2.25em;
         float: left;
+        @include d(s){
+            float: none;
+        }
     }
     header{
         &::before, &::after{
@@ -15,8 +24,9 @@
             clear: both;
         }
         a{
-            background: $orange;
+            background-color: $orange;
             color: $bege;
+            transition: .4s all ease-in-out;
             padding: 15px 20px;
             border-radius: 10px;
             font-size: 1.125em;
@@ -24,6 +34,15 @@
             text-transform: uppercase;
             float: right;
             text-align: center;
+            &:hover{
+                background-color: $black;
+                color: $orange;
+            }
+            @include d(s){
+                float: none;
+                display: inline-block;
+                margin: 10px 0;
+            }
         }
     }
     
@@ -39,6 +58,9 @@
         }
         img{
             float: left;
+            @include d(s){
+                float: none;
+            }
         }
         a{
             width: 30px;
@@ -58,6 +80,10 @@
             float: left;
             padding: 0 20px;
             width: calc(100% - 140px);
+            @include d(s){
+                float: none;
+                width: 100%;
+            }
 
             li{
                 border-bottom: 1px solid $bege;
@@ -76,4 +102,5 @@
             }
         }
     }
+   
 }
