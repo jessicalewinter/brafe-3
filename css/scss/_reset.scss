@@ -1,0 +1,22 @@
+body,ul,li,h1,h2,h3,a,span{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    background: $bege;
+}
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    display: block;
+}

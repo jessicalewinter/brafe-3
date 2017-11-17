@@ -1,0 +1,27 @@
+//-------------------------------------Colors-----------------------------------------------------
+$black: #252525;
+$bege: #e7e4d8;
+$dark-bege: #d6d3c8;
+
+//-------------------------------------Mixin Responsive-------------------------------------------
+
+$l-device: 980px;
+$m-device: 740px;
+
+@mixin d($size) {
+	@if $size == l {
+		@media screen and (min-width: #{$l-device}) {
+			@content;
+		}
+	}
+	@else if $size == m {
+		@media screen and (min-width: #{$m-device}) and (max-width: #{$l-device} - 1) {
+			@content;
+		}
+	}
+	@else if $size == s {
+		@media screen and (max-width: #{$m-device} - 1) {
+			@content;
+		}
+	}
+}
