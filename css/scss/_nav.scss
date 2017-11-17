@@ -9,12 +9,10 @@
     width: 300px;
     background: $black;
     li{
-        @include d(s){
-            display: inline-block;
-        }
+        
     }
     li a{
-        display: block;
+       
         color: $white;
         border-bottom: 2px solid $light-black;
         font-size: 1.125em;
@@ -71,7 +69,7 @@
         background-position: 0 -120px;
     }
     @include d(m){
-        width: 200px;
+        
     }
     @include d(s){
         margin: 20px 0 0 20px;

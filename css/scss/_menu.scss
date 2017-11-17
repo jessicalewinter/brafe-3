@@ -1,25 +1,18 @@
 .header{
     background: $dark-bege;
     padding: 20px;
-    &::after, &::before{
-        content: '';
-        display: table;
-        clear: both;
-    }
+    
     .header-logo{
-        float: left;
-        @include d(s){
-            float: none;
-        }
+        
     }
     .header-menu ul{
-        float: right;
+
         @include d(s){
-            float: none;
+            
             margin-top: 10px;
         }
         li{
-            display: inline-block;
+            
             a{
                 color: $black;
                 padding: 0 10px;
