@@ -1,3 +1,11 @@
+.main-container{
+    &::before, &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
 .side-nav{
     width: 300px;
     float: left;
