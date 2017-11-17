@@ -1,14 +1,12 @@
 .main-container{
-    &::before, &::after{
-        content: '';
-        display: table;
-        clear: both;
+    display: flex;
+    @include d(s){
+        flex-direction: column;
     }
 }
 
 .side-nav{
     width: 300px;
-    float: left;
     background: $black;
     li a{
         display: block;
